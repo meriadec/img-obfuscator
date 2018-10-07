@@ -1,0 +1,12 @@
+{
+  "extends": ["zavatta", "prettier"],
+  "globals": {
+    "__BROWSER__": false,
+    "__ENV__": false,
+    "__DEV__": false,
+    "__PROD__": false,
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+  }
+}

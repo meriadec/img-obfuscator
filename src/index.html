@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <title>img obfuscator</title>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <style>
+      *, *:after, *:before {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 20px;
+        font-family: serif;
+        font-size: 18px;
+        color: #555;
+      }
+
+      .source {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+      }
+
+      canvas {
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="source" target="_blank" href="https://github.com/meriadec/img-obfuscator">
+      Source on Github
+    </a>
+    <h1>img obfuscator</h1>
+    <div style="display: flex; align-items: center; margin-bottom: 20px">
+      <label id="amountDisplay">amount: 40</label>
+      <input
+        type="range"
+        id="amount"
+        min="2"
+        max="100"
+        value="40"
+        step="1"
+      />
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>original</td>
+        </tr>
+        <tr>
+          <td><canvas id="original"></canvas></td>
+        </tr>
+        <tr>
+          <td>encoded</td>
+          <td>decoded</td>
+        </tr>
+        <tr>
+          <td><canvas id="encoded"></canvas></td>
+          <td><canvas id="decoded"></canvas></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
